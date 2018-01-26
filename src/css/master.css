@@ -1,0 +1,297 @@
+/* FONTS FOR RAMBO.JS */
+
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+/* Body */
+
+body {
+  font-family: 'VT323', monospace;
+  margin:0px;
+  background-color: #2B3D15;
+  background-image:url(../../medias/map.jpg);
+  background-size: auto 900px;
+  background-repeat: repeat-x;
+  max-height:900px; 
+}
+
+/* Au chargement */
+
+#chargement {
+  width:100%;
+  height:100%;
+  margin:0 auto;
+  position: absolute;
+  text-align: center;
+  background-image: url(../../medias/texture2.png);
+  color:white;
+  z-index:10000;
+}
+
+#chargement #gamelogo {
+  height:300px;
+  margin:40px;
+  position:relative;
+}
+
+#chargement #moi {
+  height:50px;
+  margin:0px;
+  position:relative;
+  opacity:0.85;
+}
+
+#chargement button, #commencer {
+  display: block;
+  margin: 0 auto;
+  color:#a11432;
+  font-family: 'VT323', monospace;
+  font-size:3em;
+  background:transparent;
+  padding:15px;
+  border: none;
+}
+
+#chargement button:hover, #commencer:hover {
+  color:DARKGREEN;
+  font-size:3em;
+  transition:.2s;
+  cursor: pointer;
+}
+
+#chargement .footer {
+  margin:0 auto;
+  margin-top:25px;
+}
+
+#chargement .footer p {
+  font-size:1.2em;
+  color:black;
+}
+
+.red {
+  color:#a11432;
+}
+
+/* Suite du chargement */
+
+#chargement_suite {
+  width:100%;
+  height:100%;
+  margin:0 auto;
+  position: absolute;
+  text-align: center;
+  background-image: url(../../medias/texture2.png);
+  color:white;
+  z-index:9999;
+}
+
+#boss, #rambo {
+  height:200px;
+}
+
+#chargement_suite p {
+  font-size:1.75em;
+  margin: 0 auto;
+  margin-top:25px;
+  margin-bottom:25px;
+  max-width:800px;
+}
+
+#chargement_suite .portraits {
+  position: relative;
+  padding:25px;
+  /* top:50%; */
+}
+
+#chargement_suite .miniature {
+  height:100px;
+}
+
+#chargement_suite .inline {
+  display: inline-block;
+  margin: 25px;
+}
+
+#chargement_suite #commencer {
+  margin-top:25px;
+}
+
+
+/* Score */
+
+.score {
+  width:75px;
+  height:50px;
+  margin: 0 auto;
+  margin-bottom:15px;
+  padding:10px;
+  position:absolute;
+  left:15px;
+  bottom:15px;
+  text-align: center;
+  background-image:url(../../medias/texture1.jpg);
+  color:#a11432;
+  font-size:50px;
+  line-height:100%;
+  display: flex;
+  align-items: center;
+}
+
+.score img {
+  max-height:100%;
+}
+
+/* Rambo */
+
+#container {
+  position: absolute;
+  overflow: hidden;
+  width: 140px;
+  height: 195px;
+  top: 0px;
+  left: 0px;
+}
+
+.court {
+  position:absolute;
+  -webkit-animation: mouvement 0.5s steps(2) infinite;
+}
+
+.tir {
+  position:absolute;
+  -webkit-animation: tir 0.15s steps(2) infinite;
+}
+
+.fail { /* Rambo Meurt */
+  position:absolute;
+  top:-400px;
+}
+
+/* GUILLAUME BOSS */
+
+#container_boss {
+  position: absolute;
+  overflow: hidden;
+  width: 140px;
+  height: 195px;
+  z-index:2;
+}
+
+#guillaume {
+  -moz-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  left: -280px;
+  position: relative;
+}
+
+.marche { /* le boss marche */
+  position:absolute;
+  -webkit-animation: marche 0.5s steps(2) infinite;
+}
+
+.deferlante {
+  position:absolute;
+  -webkit-animation: defouraille 0.15s steps(2) infinite;
+}
+
+.win {
+  position:absolute;
+  top:-400px;
+}
+
+/* NAIN */ 
+
+.mob {
+  height:195px;
+  width: 140px;
+  overflow: hidden;
+  position: fixed; /* A l'origine en Absolute mais changée par ne pas scroller */
+  z-index: 10;
+  top: 0px;
+  left: -100%;
+}
+
+.nain {
+  position:absolute;
+  -webkit-animation: nain 0.25s steps(2) infinite;
+}
+
+.mort {  /* Nain Explose */
+  position:absolute;
+  -webkit-animation: dead 0.25s steps(2) infinite;
+}
+
+/* Balles */
+
+.bastos {
+  width:25px;
+  height:25px;
+  background-image:url(../../medias/bullet.png);
+  background-size:20px;
+  background-repeat:no-repeat;
+  position:absolute;
+  z-index:0;
+  top:60px;
+  left:120px;
+}
+
+/* Balles du boss */
+
+.salve {
+  width:100%;
+  height:5px;
+  z-index: 1;
+  background-image:url(../../medias/bullet2.png);
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+  position:absolute;
+  -webkit-animation: light 0.15s steps(3) infinite;
+}
+
+/* Keyframes */
+
+@-webkit-keyframes mouvement {
+  from { left:-140px; }
+  to { left:-420px; }
+}
+
+@-webkit-keyframes tir {
+  from { top:-200px; }
+  to { top:-200px; left:-140px; }
+}
+
+@-webkit-keyframes marche {
+  from { left:0px; }
+  to { left:-280px; }
+}
+
+@-webkit-keyframes defouraille {
+  from { top:-195px; left: 0px; }
+  to { top:-195px; left:-280px; }
+}
+
+
+@-webkit-keyframes light {
+  0% { opacity:0; }
+  50% { opacity:1; }
+  100% { opacity:0; }
+}
+
+@-webkit-keyframes dead {
+  from { top:-200px; }
+  to { top:-200px; left:-140px; }
+}
+
+@-webkit-keyframes nain {
+  from { left:-140px; }
+  to { left:-420px; }
+}
+
+@-webkit-keyframes bg {
+  from { left:0%; }
+  to { left:100%: }
+}
