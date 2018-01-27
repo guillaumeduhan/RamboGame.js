@@ -1,4 +1,9 @@
-// 25/01/2018 à 15:40:26
+/* Dernière MAJ: 27/01/2018 à 17:52:05
+Titre: Rambo.js
+Auteur: Guillaume Duhan.
+@guillaumeduhan
+myhappyagency@gmail.com
+*/
 
 "use strict";
 
