@@ -42,7 +42,7 @@ body {
   opacity:0.85;
 }
 
-#chargement button, #commencer {
+#chargement button, #chargement a, #commencer, #gameover_html a, #end a {
   display: block;
   margin: 0 auto;
   color:#a11432;
@@ -51,9 +51,10 @@ body {
   background:transparent;
   padding:15px;
   border: none;
+  text-decoration: none;
 }
 
-#chargement button:hover, #commencer:hover {
+#chargement button:hover, #chargement a:hover, #commencer:hover, #gameover_html a:hover, #end a:hover {
   color:DARKGREEN;
   font-size:3em;
   transition:.2s;
@@ -70,13 +71,19 @@ body {
   color:black;
 }
 
+/* Couleurs */
+
 .red {
   color:#a11432;
 }
 
+.green {
+  color:DARKGREEN;
+}
+
 /* Suite du chargement */
 
-#chargement_suite {
+#chargement_suite, #gameover_html, #end  {
   width:100%;
   height:100%;
   margin:0 auto;
@@ -87,11 +94,15 @@ body {
   z-index:9999;
 }
 
+#gameover_html, #end {
+  display:none;
+}
+
 #boss, #rambo {
   height:200px;
 }
 
-#chargement_suite p {
+#chargement_suite p, #gameover_html p, #end p {
   font-size:1.75em;
   margin: 0 auto;
   margin-top:25px;
@@ -118,11 +129,18 @@ body {
   margin-top:25px;
 }
 
+#gameover_html h1, #end h1 {
+  font-size: 4em;
+}
+
+.facebook {
+  margin:25px 0;
+}
 
 /* Score */
 
 .score {
-  width:75px;
+  width:80px;
   height:50px;
   margin: 0 auto;
   margin-bottom:15px;
