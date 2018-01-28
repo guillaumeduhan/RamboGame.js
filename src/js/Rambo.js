@@ -1,4 +1,4 @@
-/* Dernière MAJ: 27/01/2018 à 17:52:05
+/* Dernière MAJ: 28/01/2018 à 16:04:49
 Titre: Rambo.js
 Auteur: Guillaume Duhan.
 @guillaumeduhan
